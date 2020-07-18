@@ -43,5 +43,5 @@ jobs:
       run: sam build
     
     - name: deploy
-      run: sam deploy
+      run: echo y | sam deploy -y
              
