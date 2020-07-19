@@ -2,17 +2,18 @@
 
 name: SAM Deploy
 
-# Controls when the action will run. Triggers the workflow on push or pull reques tevents but only for the master branch
 on: 
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: 
+      - master
+    paths:
+      - hello_world/*
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   deploy:
+    timeout-minutes: 3
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
